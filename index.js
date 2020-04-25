@@ -9,6 +9,16 @@ var level = 0;
 //keep track of how many button has the user pressed on this level so far
 var userButtonOrder = 0;
 
+
+//Rules
+
+
+$("#rules").on("click",function(){
+  $("p").slideToggle();
+})
+
+
+
 //Starts the game. Either by keypress or button click
 $(document).keypress(function () {
   if (!gameStarted) {

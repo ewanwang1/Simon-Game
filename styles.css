@@ -1,25 +1,59 @@
-h1{
+h1 {
   margin-bottom: 0;
   padding-bottom: 0;
 }
 
 body {
   text-align: center;
-  background-color: #011F3F;
+  background-color: #011f3f;
+}
+
+p {
+  color: aliceblue;
+  display: none;
+  font-size: 17px;
+  line-height: 40px;
+  text-align: left;
+  margin-top: 10px;
+
+}
+
+.rules-box{
+  position: relative;
+  margin: auto;
+  bottom: 50px;
+  width: 50%;
+  text-align: center;
+}
+
+#rules {
+  background-color: transparent;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
+  color: white;
+  font-size: 20px;
+
 }
 
 #level-title {
-  font-family: 'Press Start 2P', cursive;
+  font-family: "Press Start 2P", cursive;
   font-size: 3rem;
-  margin:  5%;
-  color: #FEF2BF;
+  margin: 5%;
+  color: #fef2bf;
+  
+}
+
+.dropdown-menu {
+  position: relative;
 }
 
 .container {
   display: block;
   width: 30%;
   margin: auto;
-
 }
 
 .button {
@@ -57,10 +91,10 @@ body {
   background-color: grey;
 }
 
-#start-over{
+#start-over {
   margin-top: 50px;
 }
 
-.invisible{
-    visibility: hidden;
+.invisible {
+  visibility: hidden;
 }
