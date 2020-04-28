@@ -6,6 +6,7 @@ h1 {
 body {
   text-align: center;
   background-color: #011f3f;
+
 }
 
 p {
@@ -70,20 +71,20 @@ p {
   opacity: 0.8;
 }
 
-.red {
-  background-color: red;
+.b1 {
+  background-color: #efa8e4;
 }
 
-.green {
+.b2 {
   background-color: green;
 }
 
-.blue {
-  background-color: blue;
+.b3 {
+  background-color: #005082;
 }
 
-.yellow {
-  background-color: yellow;
+.b4 {
+  background-color:  #f8fab8;
 }
 
 .pressed {
