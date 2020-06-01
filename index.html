@@ -11,23 +11,27 @@
   </head>
 
   <body>
-    <h1 id="level-title">Press A Key to Start</h1>
-
+    <h1 id="level-title">Simon Game</h1>
+    <h5 class="level-instruction"> Press any keyboard key to start</h5>
     <!-- Rules -->
     <div class="rules-box">
-        <button id="rules">Rules</button>
-        <p>
-        1. Press a key to start. <br>
+      <button id="rulesBtn">Click here for tutorial</button>
+      <p class="rules">
+        1. Press any key on the keyboard to start the game. <br>
 
-        2. Simon will give the first signal. Repeat the signal by pressing the same color lens. This brings u to next level. <br>
-        
-        3. At next level, Simon will add one additional signal. Repeat these two signals by pressing the same color lenses, in order. <br>
-        
-        4. Continue playing as long as you can repeat each sequence of signals correctly. <br>
-        
-        5. If you fail to repeat a sequence exactly, Simon responds with a"RAZZ" sound. This means you've lost, and the sequence of signals ends.
+        2. Simon will give you the first color. Repeat it by clicking the same color box. This
+        brings u to next level. <br>
+
+        3. At next level, Simon will add one additional color. Repeat these two color by pressing the color boxes in order. <br>
+
+        4. Continue playing as long as you can repeat each sequence of color correctly. <br>
+
+        5. If you fail to repeat a sequence exactly, Simon responds with a"RAZZ" sound. This means you've lost, and the
+        sequence of color ends. My high score is 13, can you beat it? :)<br>
+
+        6. Click tutorial button again to close this tutorial
       </p>
-</div>
+    </div>
 
     <div class="container">
       <div class="row">
@@ -54,7 +58,13 @@
 
     </div>
 
-    <button id="start-over" class="btn btn-outline-light btn-lg invisible">Restart?</button>
+    <div id="start-over" class="invisible">
+      <button class="btn btn-outline-light btn-lg">Restart?</button>
+      <p class="start-over-msg">High score: </p>
+    </div>
+
+
+
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"

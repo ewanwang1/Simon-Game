@@ -6,20 +6,21 @@ h1 {
 body {
   text-align: center;
   background-color: #011f3f;
-
 }
 
 p {
   color: aliceblue;
+}
+
+.rules {
   display: none;
   font-size: 17px;
   line-height: 40px;
   text-align: left;
   margin-top: 10px;
-
 }
 
-.rules-box{
+.rules-box {
   position: relative;
   margin: auto;
   bottom: 50px;
@@ -27,7 +28,7 @@ p {
   text-align: center;
 }
 
-#rules {
+#rulesBtn {
   background-color: transparent;
   background-repeat: no-repeat;
   border: none;
@@ -36,15 +37,13 @@ p {
   outline: none;
   color: white;
   font-size: 20px;
-
 }
 
 #level-title {
   font-family: "Press Start 2P", cursive;
   font-size: 3rem;
-  margin: 5%;
+  margin: 5% ;
   color: #fef2bf;
-  
 }
 
 .dropdown-menu {
@@ -54,7 +53,7 @@ p {
 .container {
   display: block;
   width: 30%;
-  margin: auto;
+  margin: 0 auto auto;
 }
 
 .button {
@@ -72,7 +71,7 @@ p {
 }
 
 .b1 {
-  background-color:#b2ebf2  
+  background-color: #b2ebf2;
 }
 
 .b2 {
@@ -84,7 +83,11 @@ p {
 }
 
 .b4 {
-  background-color:  #f8fab8;
+  background-color: #f8fab8;
+}
+
+.button{
+  margin-top: 3%;
 }
 
 .pressed {
@@ -99,3 +102,24 @@ p {
 .invisible {
   visibility: hidden;
 }
+
+#start-over{
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.start-over-msg {
+  margin-left: 40px;
+  display: inline;
+}
+
+.level-instruction {
+  position: relative;
+  bottom: 70px;
+  color: #74d4c0;
+}
+
+.flash{
+  color: white;
+}
+

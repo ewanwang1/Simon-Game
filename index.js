@@ -5,16 +5,17 @@ var userClickedPattern = [];
 // false means not started, true means started
 var gameStarted = false;
 var level = 0;
+var highestScore = 0;
 
 //keep track of how many button has the user pressed on this level so far
 var userButtonOrder = 0;
 
 
+alert('For best in game experience, please play it on Chrome with browser zoom level at 100');
+
 //Rules
-
-
-$("#rules").on("click",function(){
-  $("p").slideToggle();
+$("#rulesBtn").on("click",function(){
+  $(".rules").slideToggle();
 })
 
 
@@ -24,6 +25,7 @@ $(document).keypress(function () {
   if (!gameStarted) {
     startOver();
     $("#level-title").text("Level " + level);
+    $(".level-instruction").addClass("invisible");
     nextSequence();
   } 
 });
@@ -60,6 +62,8 @@ $(".button").click(function (event) {
     playSound(userChosenColour);
     animatePress(userChosenColour);
     checkIfInputCorrect();
+  }else{
+    flash("level-instruction");
   }
 });
 
@@ -81,6 +85,10 @@ function gameOver() {
   playSound("wrong");
   $("h1").text("Game over");
   $("#start-over").removeClass("invisible");
+  if(level > highestScore){
+    highestScore = level;
+  }
+  $(".start-over-msg").append("Your highest score: " + highestScore);
   $("body").addClass("game-over");
   setTimeout(function () {
     $("body").removeClass("game-over");
@@ -92,6 +100,7 @@ function gameOver() {
 
 function startOver() {
   $("#start-over").addClass("invisible");
+  $(".start-over-msg").empty();
   level = 0;
   gamePattern = [];
   userClickedPattern = [];
@@ -109,5 +118,15 @@ function animatePress(currentColour) {
   selectedBtn.addClass("pressed");
   setTimeout(function () {
     selectedBtn.removeClass("pressed");
+  }, 75);
+}
+
+
+// pass in element must be a class name in string
+function flash(element){
+  var elementToFlash = $("." + element);
+  elementToFlash.addClass("flash");
+  setTimeout(function(){
+    elementToFlash.removeClass("flash");
   }, 75);
 }
